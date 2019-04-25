@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import Counter from "./counter";
 
 class Counters extends Component {
+  componentDidUpdate(previousProps, prevState) {
+    console.log("previousProps", previousProps);
+    console.log("prevState", prevState);
+    // compare old prop to new prop or state
+  }
   render() {
     const { onReset, counters, onDelete, onIncrement } = this.props;
     console.log("Counters - Rendered");

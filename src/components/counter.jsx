@@ -7,6 +7,14 @@ class Counter extends Component {
     console.log("constructor", this);
     this.handkeIncrement = this.handkeIncrement.bind(this);
   }*/
+  componentDidUpdate(previousProps, prevState) {
+    console.log("previousProps", previousProps);
+    console.log("prevState", prevState);
+    // compare old prop to new prop or state
+    if (previousProps.counter.value !== this.props.counter.value) {
+      // Make ajax call to get new data from server
+    }
+  }
 
   render() {
     console.log("Counter - Rendered");
