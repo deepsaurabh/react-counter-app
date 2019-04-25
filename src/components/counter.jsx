@@ -8,11 +8,8 @@ class Counter extends Component {
     this.handkeIncrement = this.handkeIncrement.bind(this);
   }*/
 
-  handleIncrement = () => {
-    this.setState({ value: this.state.value + 1 });
-  };
-
   render() {
+    console.log("Counter - Rendered");
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
